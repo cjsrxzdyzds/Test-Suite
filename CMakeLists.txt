@@ -408,7 +408,7 @@ foreach(folder ${cfl_test_bc_folders})
   add_test(
     NAME cfl_tests/${filename}POCR
     COMMAND ${POCRcommand} ${CMAKE_CURRENT_SOURCE_DIR}/${filename}
-    WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/${CMAKE_BUILD_TYPE}-build/bin
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/bin
   )
   if(${folder} STREQUAL basic_c_tests )
     add_test(
@@ -570,4 +570,3 @@ add_test(
         COMMAND ${command}
         WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/bin
 )
-
